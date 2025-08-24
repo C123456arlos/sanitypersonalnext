@@ -1,0 +1,45 @@
+const project = {
+    name: 'project',
+    title: 'projects',
+    type: 'document',
+    fields: [
+        {
+            name: 'name',
+            title: 'name',
+            type: 'string',
+        },
+        {
+            name: 'slug',
+            title: 'slug',
+            type: 'slug',
+            options: { source: 'name' }
+        },
+        {
+            name: 'image',
+            title: 'Image',
+            type: 'image',
+            options: {
+                hotspot: true
+            },
+            fields: [
+                {
+                    name: 'alt',
+                    title: 'alt',
+                    type: 'string'
+                }
+            ]
+        },
+        {
+            name: 'url',
+            title: 'url',
+            type: 'url'
+        },
+        {
+            name: 'content',
+            title: 'content',
+            type: 'array',
+            of: [{ type: 'block' }]
+        }
+    ]
+}
+export default project
