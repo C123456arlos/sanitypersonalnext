@@ -4,8 +4,9 @@ import { PortableText } from "@portabletext/react"
 
 
 type Props = {
-    params: { slug: string }
+    params: { slug: string[] | any }
 }
+
 export default async function Page({ params }: Props) {
     const page = await getPage(params.slug)
     return (
